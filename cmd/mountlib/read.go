@@ -53,6 +53,7 @@ func (fh *ReadFileHandle) openPending() (err error) {
 		return err
 	}
 	fh.r = fs.NewAccount(r, fh.o).WithBuffer() // account the transfer
+	fh.opened = true
 	return nil
 }
 
